@@ -32,7 +32,10 @@
     "info": "npm info react-stockcharts",
     "sourcemap:visualize": "source-map-explorer build/dist/react-stockcharts.min.js build/dist/react-stockcharts.min.js.map",
     "server": "cd build && python3 -m http.server 8090",
-    "postinstall": "cross-env BABEL_ENV=cjs babel src --out-dir . --source-maps && cross-env BABEL_ENV=es babel src --out-dir es --source-maps"
+    "compile:deps": "npm run build --prefix node_modules/save-svg-as-png",
+    "compile:cjs": "cross-env BABEL_ENV=cjs babel src --out-dir . --source-maps",
+    "compile:es": "cross-env BABEL_ENV=es babel src --out-dir es --source-maps",
+    "postinstall": "npm run compile:deps && npm run compile:cjs && npm run compile:es"
   },
   "dependencies": {
     "d3-array": "^1.2.1",
@@ -56,6 +59,7 @@
     "babel-eslint": "^8.0.2",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
     "bootstrap": "^3.3.7",
