@@ -49,7 +49,7 @@
     "debug": "^3.1.0",
     "lodash.flattendeep": "^4.4.0",
     "prop-types": "^15.6.0",
-    "save-svg-as-png": "git+https://github.com/ezekg/saveSvgAsPng#patch-1"
+    "save-svg-as-png": "git+https://github.com/ezekg/saveSvgAsPng#fix/remove-anonymous-amd-module"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
