@@ -2,8 +2,8 @@
   "name": "react-stockcharts",
   "version": "0.7.7",
   "description": "Highly customizable stock charts with ReactJS and d3",
-  "main": "src/index.js",
-  "module": "src/index.js",
+  "main": "index.js",
+  "module": "es/index.js",
   "author": {
     "name": "Ragu Ramaswamy"
   },
@@ -32,7 +32,7 @@
     "info": "npm info react-stockcharts",
     "sourcemap:visualize": "source-map-explorer build/dist/react-stockcharts.min.js build/dist/react-stockcharts.min.js.map",
     "server": "cd build && python3 -m http.server 8090",
-    "postinstall": "cross-env BABEL_ENV=cjs babel src --out-dir . --source-maps"
+    "postinstall": "cross-env BABEL_ENV=cjs babel src --out-dir . --source-maps && cross-env BABEL_ENV=es babel src --out-dir es --source-maps"
   },
   "dependencies": {
     "d3-array": "^1.2.1",
