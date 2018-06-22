@@ -32,6 +32,7 @@
     "info": "npm info react-stockcharts",
     "sourcemap:visualize": "source-map-explorer build/dist/react-stockcharts.min.js build/dist/react-stockcharts.min.js.map",
     "server": "cd build && python3 -m http.server 8090",
+    "preinstall": "NODE_ENV=development npm install",
     "postinstall": "cross-env BABEL_ENV=es babel src --out-dir . --source-maps"
   },
   "dependencies": {
