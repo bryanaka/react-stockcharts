@@ -114,6 +114,7 @@ function helper(props, moreProps) {
 		hideLine,
 		lineOpacity,
 		lineStroke,
+		lineStrokeWidth: strokeWidth,
 		lineStrokeDasharray: strokeDasharray,
 		stroke,
 		strokeOpacity,

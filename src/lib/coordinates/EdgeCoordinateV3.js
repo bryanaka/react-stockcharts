@@ -18,6 +18,7 @@ export function renderSVG(props) {
 				className="react-stockcharts-cross-hair"
 				strokeOpacity={edge.line.opacity}
 				stroke={edge.line.stroke}
+				strokeWidth={edge.line.strokeWidth}
 				strokeDasharray={getStrokeDasharray(edge.line.strokeDasharray)}
 				x1={edge.line.x1}
 				y1={edge.line.y1}
@@ -104,6 +105,7 @@ function helper(props) {
 		orient,
 		edgeAt,
 		hideLine,
+		lineStrokeWidth,
 		lineStrokeDasharray
 	} = props;
 	const {
@@ -178,6 +180,7 @@ function helper(props) {
 		: {
 			opacity: lineOpacity,
 			stroke: lineStroke,
+			strokeWidth: lineStrokeWidth,
 			strokeDasharray: lineStrokeDasharray,
 			x1,
 			y1,
